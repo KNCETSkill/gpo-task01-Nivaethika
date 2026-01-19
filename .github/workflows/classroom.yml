@@ -25,67 +25,57 @@ jobs:
         run: |
           javac src/BrewSizeAdvisor.java
 
-      # ---------------- TEST CASE 1 ----------------
+      # ---------- TEST CASE 1 (10 POINTS) ----------
       - name: Test Case 1 - Medium (220)
         id: tc1
         run: |
           output=$(echo 220 | java -cp src BrewSizeAdvisor)
           if [ "$output" = "Medium" ]; then
-            echo "TC1 PASSED"
-            echo "score=1" >> $GITHUB_OUTPUT
+            echo "score=10" >> $GITHUB_OUTPUT
           else
-            echo "TC1 FAILED: Output was $output"
             echo "score=0" >> $GITHUB_OUTPUT
           fi
 
-      # ---------------- TEST CASE 2 ----------------
+      # ---------- TEST CASE 2 (10 POINTS) ----------
       - name: Test Case 2 - Large (400)
         id: tc2
         run: |
           output=$(echo 400 | java -cp src BrewSizeAdvisor)
           if [ "$output" = "Large" ]; then
-            echo "TC2 PASSED"
-            echo "score=1" >> $GITHUB_OUTPUT
+            echo "score=10" >> $GITHUB_OUTPUT
           else
-            echo "TC2 FAILED: Output was $output"
             echo "score=0" >> $GITHUB_OUTPUT
           fi
 
-      # ---------------- TEST CASE 3 ----------------
+      # ---------- TEST CASE 3 (10 POINTS) ----------
       - name: Test Case 3 - Small (150)
         id: tc3
         run: |
           output=$(echo 150 | java -cp src BrewSizeAdvisor)
           if [ "$output" = "Small" ]; then
-            echo "TC3 PASSED"
-            echo "score=1" >> $GITHUB_OUTPUT
+            echo "score=10" >> $GITHUB_OUTPUT
           else
-            echo "TC3 FAILED: Output was $output"
             echo "score=0" >> $GITHUB_OUTPUT
           fi
 
-      # ---------------- TEST CASE 4 ----------------
+      # ---------- TEST CASE 4 (10 POINTS) ----------
       - name: Test Case 4 - Boundary (200)
         id: tc4
         run: |
           output=$(echo 200 | java -cp src BrewSizeAdvisor)
           if [ "$output" = "Medium" ]; then
-            echo "TC4 PASSED"
-            echo "score=1" >> $GITHUB_OUTPUT
+            echo "score=10" >> $GITHUB_OUTPUT
           else
-            echo "TC4 FAILED: Output was $output"
             echo "score=0" >> $GITHUB_OUTPUT
           fi
 
-      # ---------------- TEST CASE 5 ----------------
+      # ---------- TEST CASE 5 (10 POINTS) ----------
       - name: Test Case 5 - Boundary (350)
         id: tc5
         run: |
           output=$(echo 350 | java -cp src BrewSizeAdvisor)
           if [ "$output" = "Medium" ]; then
-            echo "TC5 PASSED"
-            echo "score=1" >> $GITHUB_OUTPUT
+            echo "score=10" >> $GITHUB_OUTPUT
           else
-            echo "TC5 FAILED: Output was $output"
             echo "score=0" >> $GITHUB_OUTPUT
           fi
